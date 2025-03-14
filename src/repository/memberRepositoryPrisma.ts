@@ -14,7 +14,7 @@ export function getMemberByName(name: string): Promise<Member[]> {
 }
 
 export function getMemberById(id: number): Promise<Member | null> {
-    return prisma.member.findMany({
+    return prisma.member.findUnique({
         where: { id },
     });
 }

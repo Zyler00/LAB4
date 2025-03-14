@@ -1,5 +1,5 @@
 export interface Member {
     id?: number;
-    name?: string;
-    phone?: string;
+    name: string | null;
+    phone: string | null;
 }
