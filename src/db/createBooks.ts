@@ -8,44 +8,61 @@ export async function createBooks() {
         {
             title: "Concert",
             type: "Music",
-            authorId: 1,
         },
         {
             title: "Festival",
             type: "Music",
-            authorId: 2,
         },
         {
             title: "Football Match",
             type: "Sports",
-            authorId: 3,
         },
         {
             title: "Jazz Night",
             type: "Music",
-            authorId: 4,
         },
         { 
             title: "Shakespeare in the Park",
             type: "Theatre",
-            authorId: 5,
         },
         {
             title: "Food Truck Festival",
             type: "Food",
-            authorId: 6,
         }
     ];
 
     for (const book of books) {
         await prisma.book.create({
             data: {
-                title: book.title,
-                type: book.type,
-                authorId: book.authorId,
+                title: book.title || '',
+                type: book.type || '',
             }
         });
     }
 
+    const resposneBooks = await prisma.book.findMany();
+
+    const responseAuthor = await prisma.author.findMany();
+
+    addAuthor(resposneBooks[0].id, responseAuthor[0].id);
+    addAuthor(resposneBooks[1].id, responseAuthor[1].id);
+    addAuthor(resposneBooks[2].id, responseAuthor[2].id);
+    addAuthor(resposneBooks[3].id, responseAuthor[3].id);
+    addAuthor(resposneBooks[4].id, responseAuthor[4].id);
+    addAuthor(resposneBooks[5].id, responseAuthor[5].id);
+
     console.log("Database has been initialized with books.");
 }
+
+async function addAuthor(bookId: number, authorId: number) {
+    await prisma.book.update({
+      where: { id: bookId },
+      data: {
+        author: {
+          connect: {
+            id: authorId
+          }
+        }
+      }
+    })
+  }

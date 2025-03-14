@@ -6,9 +6,9 @@ import { createHistory } from './db/createHistory';
 
 const prisma = new PrismaClient();
 async function main() {
-     await createBooks();
      await createAuthors();
      await createMembers ();
+     await createBooks();     
      await createHistory();
 }
     
