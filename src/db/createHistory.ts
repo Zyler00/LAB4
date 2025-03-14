@@ -8,38 +8,38 @@ export async function createHistory() {
         {
             memberId: 1,
             bookId: 1,
-            borrowDate: new Date('2025-01-01').toISOString(),
-            returnDate: new Date('2025-01-15').toISOString(),
+            borrowDate: new Date('2025-01-01'),
+            returnDate: new Date('2025-01-15'),
         },
         {
             memberId: 2,
             bookId: 2,
-            borrowDate: new Date('2025-02-01').toISOString(),
-            returnDate: new Date('2025-02-15').toISOString(),
+            borrowDate: new Date('2025-02-01'),
+            returnDate: new Date('2025-02-15'),
         },
         {
             memberId: 3,
             bookId: 3,
-            borrowDate: new Date('2025-03-01').toISOString(),
-            returnDate: new Date('2025-03-15').toISOString(),
+            borrowDate: new Date('2025-03-01'),
+            returnDate: new Date('2025-03-15'),
         },
         {
             memberId: 4,
             bookId: 4,
-            borrowDate: new Date('2025-04-01').toISOString(),
-            returnDate: new Date('2025-04-15').toISOString(),
+            borrowDate: new Date('2025-04-01'),
+            returnDate: new Date('2025-04-15'),
         },
         {
             memberId: 5,
             bookId: 5,
-            borrowDate: new Date('2025-05-01').toISOString(),
-            returnDate: new Date('2025-05-15').toISOString(),
+            borrowDate: new Date('2025-05-01'),
+            returnDate: new Date('2025-05-15'),
         },
         {
             memberId: 6,
             bookId: 6,
-            borrowDate: new Date('2025-06-01').toISOString(),
-            returnDate: new Date('2025-06-15').toISOString(),
+            borrowDate: new Date('2025-06-01'),
+            returnDate: new Date('2025-06-15'),
         }
     ];
 
