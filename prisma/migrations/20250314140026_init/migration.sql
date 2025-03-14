@@ -1,3 +1,0 @@
--- AlterTable
-ALTER TABLE `Book` MODIFY `title` VARCHAR(191) NULL,
-    MODIFY `type` VARCHAR(191) NULL;
