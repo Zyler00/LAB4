@@ -7,7 +7,7 @@ export interface History {
     book?: Book | null;
     memberId?: number | null;
     member?: Member | null;
-    borrowDate?: Date;
-    returnDate?: Date | null;
+    borrowDate?: string | null;
+    returnDate?: string | null;
     status?: string;
 }

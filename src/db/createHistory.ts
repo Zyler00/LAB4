@@ -8,38 +8,38 @@ export async function createHistory() {
         {
             memberId: 1,
             bookId: 1,
-            borrowDate: new Date('2025-01-01'),
-            returnDate: new Date('2025-01-15'),
+            borrowDate: new Date('2025-01-01').toISOString(),
+            returnDate: new Date('2025-01-15').toISOString(),
         },
         {
             memberId: 2,
             bookId: 2,
-            borrowDate: new Date('2025-02-01'),
-            returnDate: new Date('2025-02-15'),
+            borrowDate: new Date('2025-02-01').toISOString(),
+            returnDate: new Date('2025-02-15').toISOString(),
         },
         {
             memberId: 3,
             bookId: 3,
-            borrowDate: new Date('2025-03-01'),
-            returnDate: new Date('2025-03-15'),
+            borrowDate: new Date('2025-03-01').toISOString(),
+            returnDate: new Date('2025-03-15').toISOString(),
         },
         {
             memberId: 4,
             bookId: 4,
-            borrowDate: new Date('2025-04-01'),
-            returnDate: new Date('2025-04-15'),
+            borrowDate: new Date('2025-04-01').toISOString(),
+            returnDate: new Date('2025-04-15').toISOString(),
         },
         {
             memberId: 5,
             bookId: 5,
-            borrowDate: new Date('2025-05-01'),
-            returnDate: new Date('2025-05-15'),
+            borrowDate: new Date('2025-05-01').toISOString(),
+            returnDate: new Date('2025-05-15').toISOString(),
         },
         {
             memberId: 6,
             bookId: 6,
-            borrowDate: new Date('2025-06-01'),
-            returnDate: new Date('2025-06-15'),
+            borrowDate: new Date('2025-06-01').toISOString(),
+            returnDate: new Date('2025-06-15').toISOString(),
         }
     ];
 
@@ -48,7 +48,7 @@ export async function createHistory() {
             data: {
                 memberId: record.memberId,
                 bookId: record.bookId,
-                borrowDate: record.borrowDate,
+                borrowDate: record.borrowDate ?? new Date().toISOString(),
                 returnDate: record.returnDate,
             }
         });

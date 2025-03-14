@@ -43,8 +43,8 @@ model History {
   book Book? @relation(fields: [bookId], references: [id])
   memberId Int?
   member Member? @relation(fields: [memberId], references: [id])
-  borrowDate DateTime
-  returnDate DateTime?
+  borrowDate String?
+  returnDate String?
   status String?
 }
 
